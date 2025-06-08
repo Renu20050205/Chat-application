@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Chat App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-yHrsAiZBh6c5oN1sN1CMB1t0u1nRWlUvXlODAF9tpIg3E91nlrY7OhTjC5gAhp3pVzK4oGUbUg0qDUU3iSg1mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">💬 Chatify</div>
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./Features.html">Features</a></li>
+      <li><a href="./Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="chat-container">
+    <aside class="sidebar">
+      <h2>👥 Online Users</h2>
+      <ul id="online-users" class="users-list">
+        <!-- Users added dynamically -->
+      </ul>
+    </aside>
+
+    <main class="chat-main">
+      <header class="chat-header">
+        <h1>💬 Live Chat Room</h1>
+        <button id="dark-mode-toggle">
+          <img src="https://cdn-icons-png.flaticon.com/512/581/581601.png" alt="Toggle Dark Mode" id="dark-mode-img" />
+        </button>
+      </header>
+
+      <ul id="messages" class="messages">
+        <!-- Chat messages here -->
+      </ul>
+
+      <form id="message-form">
+        <input id="message-input" placeholder="Type your message...">
+        <button type="submit">
+          <img src="https://cdn-icons-png.flaticon.com/512/724/724715.png" alt="Send" class="send-icon" />
+        </button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
